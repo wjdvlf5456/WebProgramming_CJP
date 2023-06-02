@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>최정필의 갤러리</title>
+	
+	<!-- css -->
+	<link href="../assets/css/mysite.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/gallery.css" rel="stylesheet" type="text/css">
+	
+	<!-- JavaScript -->
+	<script type="text/javascript" src="../assets/js/jquery-1.12.4.js"></script>
+	<script>
+		$(document).ready(function () {
+			setInterval(realTime, 1000);
+		});
+		
+		function realTime() {
+			var nowDate = new Date();
+			
+			var year = nowDate.getFullYear();
+			var month = nowDate.getMonth() + 1;
+			var day = nowDate.getDate();
+			var hour = nowDate.getHours();
+			var minute = nowDate.getMinutes();
+			var seconds = nowDate.getSeconds();
+			
+			var zeroNum = '';
+			
+			if (seconds < 10) {
+				zeroNum = '0';
+			}
+			;
+			
+			
+			$('#clock').text('현재시각: ' + year + '년 ' + month + '월 ' + day + '일 ' + hour + '시 ' + minute + '분 ' + zeroNum + seconds + '초');
+		}
+		
+		
+		
+	
+	
+	</script>
+</head>
+
+
+<body>
+	<div id="wrap">
+		
+		
+		<div id="header" class="clearfix">
+			<h1>
+				<a href="../views/index.html" target="_self">최정필</a>
+			</h1>
+			<ul>
+				<li id="clock">현재시각: 2023년 6월 3일 00시 00분 00초</li>
+			</ul>
+		</div>
+		<!-- //header -->
+		
+		
+		<div id="nav">
+			<ul class="clearfix">
+				<li><a href="../views/index.html">메인</a></li>
+				<li><a href="../views/list.html">게시판</a></li>
+				<li><a href="../views/gallery.html">갤러리</a></li>
+			</ul>
+		</div>
+		<!-- //nav -->
+		
+		
+		<div id="content">
+			
+			<div id="content-head">
+				<h3>사진 모음</h3>
+				<div id="location">
+					<ul>
+						<!--<li id="ascending">정렬</li>-->
+						<li id="descending">정렬</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!-- //content-head -->
+			
+			
+			<div id="gallery">
+				<div id="list">
+					<div class="clear"></div>
+					
+					<ul id="viewArea">
+						<!-- 이미지반복영역 -->
+						<div class="view">
+							<img class="imgItem" src="../assets/image/Java.jpg">
+							<div class="imgWriter">
+								<strong>자바</strong>
+							</div>
+						</div>
+						<div class="view">
+							<img class="imgItem" src="../assets/image/python.png">
+							<div class="imgWriter">
+								<strong>파이썬</strong>
+							</div>
+						</div>
+						<div class="view">
+							<img class="imgItem" src="../assets/image/kotlin.png">
+							<div class="imgWriter">
+								<strong>코틀린</strong>
+							</div>
+						</div>
+						<!-- 이미지반복영역 -->
+					
+					
+					</ul>
+				</div>
+				<!-- //list -->
+			</div>
+			<!-- //board -->
+		</div>
+		<!-- //content  -->
+		<div class="clear"></div>
+		
+		<div id="footer">Copyright ⓒ 2023 최정필. All right reserved</div>
+		<!-- //footer -->
+	
+	</div>
+	<!-- //wrap -->
+
+
+</body>
+
+</html>
+

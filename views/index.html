@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>컴퓨터공학과_최정필_메인</title>
+	
+	<!-- css -->
+	<link href="../assets/css/mysite.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+	
+	<!-- JavaScript -->
+	<script type="text/javascript" src="../assets/js/jquery-1.12.4.js"></script>
+	<script>
+		$(document).ready(function () {
+			setInterval(realTime, 1000);
+		});
+		
+		
+		function realTime() {
+			var nowDate = new Date();
+			
+			var year = nowDate.getFullYear();
+			var month = nowDate.getMonth() + 1;
+			var day = nowDate.getDate();
+			var hour = nowDate.getHours();
+			var minute = nowDate.getMinutes();
+			var seconds = nowDate.getSeconds();
+			
+			var zeroNum = '';
+			
+			if (seconds < 10) {
+				zeroNum = '0';
+			};
+			
+			
+			$('#clock').text('현재시각: ' + year + '년 ' + month + '월 ' + day + '일 ' + hour + '시 ' + minute + '분 ' + zeroNum + seconds + '초');
+		}
+	
+	
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+		
+		<div id="header" class="clearfix">
+			<h1>
+				<a href="../views/index.html" target="_self">최정필</a>
+			</h1>
+			<ul>
+				<li id="clock">현재시각: 2023년 6월 3일 00시 00분 00초</li>
+			</ul>
+		
+		</div>
+		
+		
+		<div id="nav">
+			<ul class="clearfix">
+				<li><a href="../views/index.html">메인</a></li>
+				<li><a href="../views/list.html">게시판</a></li>
+				<li><a href="../views/gallery.html">갤러리</a></li>
+			</ul>
+		</div>
+		<!-- //nav -->
+		
+		
+		<div id="container" class="clearfix">
+			
+			
+			<div id="content">
+				<div id="index">
+					<img id="profile-img" src="../assets/image/최정필.jpg">
+					
+					<p id="greetings" class="text-xlarge">
+						<span class="bold">안녕하세요!!<br>
+						최정필의 홈페이지에 오신 것을 환영합니다.<br> <br>
+						이 사이트는 웹 프로그래밍 실습과제 예제 사이트입니다.<br>
+						</span>
+						<br>
+						메인, 게시판, 갤러리 등으로 구성되어 있으며
+						<br>
+						html + css + JavaScript 로 구성했습니다.
+						<br><br>
+						jQuery 버전은 1.12.4 버전을 사용했습니다.
+						<br><br>
+					</p>
+					<!-- //greetings -->
+				
+				</div>
+				<!-- //index -->
+			
+			</div>
+			<!-- //content -->
+		</div>
+		<!-- //container -->
+		
+		<div id="footer">Copyright ⓒ 2023 최정필. All right reserved</div>
+		<!-- //footer -->
+	
+	</div>
+	<!-- //wrap -->
+
+</body>
+</html>
