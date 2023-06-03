@@ -11,6 +11,48 @@ textarea, button, form {
     padding: 0;
 }
 
+
+@media (max-width: 768px) {
+    #wrap {
+        width: 300px;
+    }
+
+    #header h1 a {
+        font-size: 20px;
+    }
+
+
+    #nav ul li {
+        font-size: 10px;
+        margin-right: 20px;
+    }
+
+    #nav ul > li {
+        width: 100px;
+
+    }
+
+
+    #index #profile-img {
+        width: 50%;
+        height: auto;
+    }
+
+    #greetings {
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    #footer {
+        font-size: 8px;
+        padding: 10px;
+        height: auto;
+        display: none;
+    }
+
+}
+
+
 body {
     font-size: 12px;
     font-family: "맑은 고딕", 돋움, 굴림;
@@ -161,11 +203,6 @@ a:hover {
 
 
 /****************** 공통 ************************/
-/* clearfix */
-.clearfix {
-    *zoom: 1;
-}
-
 .clearfix:before, .clearfix:after {
     display: block;
     content: "";
@@ -237,10 +274,4 @@ textarea {
     clear: both;
 }
 
-/* 버튼 공통*/
-.btn {
-    border: 1px solid #808080;
-    background-color: #DDDDDD;
-    padding: 5px 15px 5px 15px;
-}
 
